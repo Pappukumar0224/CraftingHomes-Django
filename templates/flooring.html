@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Flooring Services - Crafting Homes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/paint.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <img src="{% static 'images/logo1.jpg' %}" alt="crafting home logo" class="logo">
+    <h1>Crafting Homes</h1>
+    <p>Your one-stop solution for home services, Precision in Every Detail, Perfection in Every Service.</p>
+</header>
+
+<div class="container">
+
+    <h2>Our Services:</h2>
+
+    <section id="logos">
+
+        <a href="#contact1">
+            <img src="{% static 'images/floor-installation-cartoon-illustration-with-repairman-laying-professional-parquet-wood-or-tile-floors-in-house-flooring-renovation-design-vector.jpg' %}"
+                alt="Installation" class="same-size-img">
+            Wood Flooring
+        </a>
+
+        <a href="#contact2">
+            <img src="{% static 'images/tile_floor_logo.jpg' %}"
+                alt="Tile Flooring" class="same-size-img">
+            Tile Flooring
+        </a>
+
+        <a href="#contact3">
+            <img src="{% static 'images/marbel_logo.jpg' %}"
+                alt="Marble Flooring" class="same-size-img">
+            Marble Flooring
+        </a>
+
+        <a href="#contact4">
+            <img src="{% static 'images/0_hCKcf61ql2Rk1oY5.png' %}"
+                alt="Refinishing and Repair" class="same-size-img">
+            Refinishing & Repair
+        </a>
+
+    </section>
+
+    <section id="contact1">
+        <div class="service">
+
+            <h2>Wood Flooring</h2>
+
+            <img src="{% static 'images/wood_flr.jpg' %}"
+                alt="wood flooring" class="custom-size-img">
+
+            <p>
+                <b>Expert wood flooring installation:</b>
+                Transform your space with precision and quality craftsmanship.
+                From selection to installation, we ensure a flawless finish every time.
+            </p>
+
+            <h4>Starting at ₹199/Service</h4>
+
+        </div>
+    </section>
+
+    <section id="contact2">
+        <div class="service">
+
+            <h2>Tile Flooring</h2>
+
+            <img src="{% static 'images/istockphoto-1133604763-612x612.jpg' %}"
+                alt="Tile Flooring" class="custom-size-img">
+
+            <p>
+                <b>Refinishing and Restoration:</b>
+                Renew your space with our refinishing and restoration services.
+                From bringing old woodwork back to life to refreshing worn surfaces,
+                we revitalize your home's beauty.
+            </p>
+
+            <h4>Starting at ₹149/Service</h4>
+
+        </div>
+    </section>
+
+    <section id="contact3">
+        <div class="service">
+
+            <h2>Marble Flooring</h2>
+
+            <img src="{% static 'images/Marble.jpg' %}"
+                alt="Marble Flooring" class="custom-size-img">
+
+            <p>
+                <b>Repair your floor:</b>
+                Tile repair made easy. From fixing cracks to replacing damaged tiles,
+                we restore your surfaces to their original beauty with skill and precision.
+            </p>
+
+            <h4>Starting at ₹99/Service</h4>
+
+        </div>
+    </section>
+
+    <section id="contact4">
+        <div class="service">
+
+            <h2>Refinishing & Repair</h2>
+
+            <img src="{% static 'images/repair_ref.jpg' %}"
+                alt="Refinishing and Repair" class="custom-size-img">
+
+            <p>
+                <b>Seeking specialized flooring services?</b>
+                Seal in beauty and protect for life. Our sealing and coating services
+                offer lasting protection and enhanced aesthetics for your surfaces.
+                Trust us to safeguard your space with quality expertise.
+            </p>
+
+            <h4>Starting at ₹99/Service</h4>
+
+        </div>
+    </section>
+
+</div>
+<!-- Booking Button -->
+<div class="book-btn-container">
+
+    {% if request.session.user_email %}
+
+<a href="{% url 'booking' %}?service=flooring">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+{% else %}
+
+<a href="{% url 'login' %}">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Crafting Homes</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+
+<div class="form-structor">
+
+    <!-- Signup Form -->
+    <form action="" method="POST" id="registrationForm">
+
+        {% csrf_token %}
+
+        <div class="signup">
+
+            <h2 class="form-title" id="signup">
+                <span>or</span> Sign up
+            </h2>
+
+            <div class="form-holder">
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       class="input"
+                       placeholder="Name"
+                       required>
+
+                <input type="tel"
+                       id="mobileNo"
+                       name="mobileNo"
+                       class="input"
+                       placeholder="Mobile No"
+                       required>
+
+                <input type="email"
+                       id="signupEmail"
+                       name="email"
+                       class="input"
+                       placeholder="Email"
+                       required>
+
+                <input type="password"
+                       id="signupPassword"
+                       name="password"
+                       class="input"
+                       placeholder="Password"
+                       required>
+
+                <input type="password"
+                       id="confirmPassword"
+                       name="confirmPassword"
+                       class="input"
+                       placeholder="Confirm Password"
+                       required>
+
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Sign up
+            </button>
+
+        </div>
+
+    </form>
+
+    <!-- Login Form -->
+    <form id="login-form" action="" method="POST">
+
+        {% csrf_token %}
+
+        <div class="login slide-up">
+
+            <div class="center">
+
+                <h2 class="form-title" id="login">
+                    User Login
+                    <br>
+                    <span>or</span>
+
+                    <span>
+                        <a href="/admin/">
+                            Admin Login
+                        </a>
+                    </span>
+                </h2>
+
+                <div class="form-holder">
+
+                    <input type="email"
+                           id="loginEmail"
+                           name="email"
+                           class="input"
+                           placeholder="Email"
+                           required>
+
+                    <input type="password"
+                           id="loginPassword"
+                           name="password"
+                           class="input"
+                           placeholder="Password"
+                           required>
+
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Log in
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+<script src="{% static 'js/login.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Crafting Homes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <h1>About Crafting Homes</h1>
+</header>
+
+<section class="about">
+
+    <h2>Who We Are</h2>
+
+    <p>
+        Welcome to Crafting Homes, your trusted partner for a wide range
+        of home services.
+    </p>
+
+    <h2>Our Mission</h2>
+
+    <p>
+        At Crafting Homes, our mission is to deliver exceptional services
+        that enhance the comfort and beauty of your home.
+    </p>
+
+    <h2>Meet the Team</h2>
+
+    <p>
+        Our team is comprised of skilled professionals committed to quality work.
+    </p>
+
+</section>
+
+{% endblock %}

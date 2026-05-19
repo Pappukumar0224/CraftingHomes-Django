@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Crafting Homes{% endblock %}
+
+{% block content %}
+
+<header>
+    <h1>Welcome to Crafting Homes</h1>
+    <p>Your trusted partner for home services.</p>
+</header>
+
+    <section class="services" id="home">
+        <!-- Service 1: Painting -->
+        <div class="service-card" id="painting" data-service="painting">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                       <img src="{% static 'images/painting1.jpg' %}" alt="Painting Service Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/painting2.jpg' %}" alt="Painting Service Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/painting3.jpg' %}" alt="Painting Service Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/painting4.jpg' %}" alt="Painting Service Image 2">
+                    </div>
+                    <!-- Add more swiper-slide divs for additional images -->
+                </div>
+                <!-- Add Navigation and Pagination -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="card-info">
+                <h2>Painting</h2>
+                <p>Transform your living spaces with our professional painting services.</p>
+                <a href="/paint/" class="btn"> Explore </a>
+            </div>
+        </div>
+
+        <!-- Service 2: carpenter -->
+        <div class="service-card" id="carpenter" data-service="carpenter">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/carpenter1.jpeg' %}" alt="carpenter Service Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/carpenter2.jpg' %}" alt="carpenter Service Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/Carpenter3.jpeg' %}" alt="carpenter Service  Image 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/carpentry4.jpg' %}" alt="carpenter Service  Image 4">
+                    </div>
+
+                    <!-- Add more swiper-slide divs for additional images -->
+                </div>
+                <!-- Add Navigation and Pagination -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="card-info">
+                <h2>Carpentry</h2>
+                <p>Experience expert carpentry services for your home.</p>
+                <a href="/carpenter/" class="btn">Explore</a>
+            </div>
+        </div>
+
+        <!-- Add more service cards as needed -->
+                <!-- Service 3: hous cleaning -->
+                <div class="service-card" id="cleaning" data-service="cleaning">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/cleaning1.jpg' %}" alt="House Cleaning Service Image 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/cleaning2.jpeg' %}" alt="House Cleaning Service Image 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/cleaning3.jpg' %}" alt="House Cleaning Service Image 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/cleaning4.jpeg' %}" alt="House Cleaning Service Image 2">
+                            </div>
+        
+                            <!-- Add more swiper-slide divs for additional images -->
+                        </div>
+                        <!-- Add Navigation and Pagination -->
+                        <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+                    <div class="card-info">
+                        <h2>House cleaning</h2>
+                        <p>Experience a spotless home with our professional house cleaning services.</p>
+                        <a href="/house_cleaning/" class="btn">Explore</a>
+                    </div>
+                </div>
+
+                        <!-- Service 4: plumbing -->
+        <div class="service-card" id="plumbing" data-service="plumbing">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/Plumbing1.jpg' %}" alt=" plumbing Service Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/plumbing2.jpg' %}" alt="plumbing Service Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/plumbing3.jpeg' %}" alt="plumbing Service Image 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/plumbing4.jpg' %}" alt="plumbing Service Image 4">
+                    </div>
+
+                    <!-- Add more swiper-slide divs for additional images -->
+                </div>
+                <!-- Add Navigation and Pagination -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="card-info">
+                <h2>Plumbing</h2>
+                <p>Ensure your home's plumbing is in top-notch condition with our professional plumbing services. </p>
+                <a href="/plumber/" class="btn">Explore</a>
+            </div>
+        </div>
+
+                <!-- Service 5:flooring  -->
+                <div class="service-card" id="flooring" data-service="flooring">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/tile_florring1.jpg' %}" alt="flooring Service Image 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/tile_floring2.jpg' %}" alt="flooring Service Image 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/marval_floring.jpg' %}" alt="flooring Service Image 3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{% static 'images/flooring4.jpg' %}" alt="flooring Service Image 4">
+                            </div>
+        
+                            <!-- Add more swiper-slide divs for additional images -->
+                        </div>
+                        <!-- Add Navigation and Pagination -->
+                        <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+                    <div class="card-info">
+                        <h2> Flooring </h2>
+                        <p>Enhance your home's aesthetics with our professional flooring services. </p>
+                        <a href="/flooring/" class="btn">Explore</a>
+                    </div>
+                </div>
+
+
+                        <!-- Service 6: electric -->
+        <div class="service-card" id="electric" data-service="electric">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/electrical1.jpeg' %}" alt="House Cleaning Service Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/electrical2.jpg' %}" alt="House Cleaning Service Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/Electrician3-.jpg' %}" alt="House Cleaning Service Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/electric4.jpg' %}" alt="House Cleaning Service Image 2">
+                    </div>
+
+                    <!-- Add more swiper-slide divs for additional images -->
+                </div>
+                <!-- Add Navigation and Pagination -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="card-info">
+                <h2>Electrician </h2>
+                <p>Ensure the safety and functionality of your electrical systems with our expert electrician services. </p>
+                <a href="/electrical/" class="btn">Explore</a>
+            </div>
+        </div>
+        
+
+    </section>
+{% endblock %}

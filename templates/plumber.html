@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Plumbing Services - Crafting Homes{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/paint.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <img src="{% static 'images/logo1.jpg' %}" alt="crafting home logo" class="logo">
+    <h1>Crafting Homes</h1>
+    <p>Your one-stop solution for home services, Precision in Every Detail, Perfection in Every Service.</p>
+</header>
+
+<div class="container">
+
+    <h2>Our Services:</h2>
+
+    <section id="logos">
+        <a href="#contact1">
+            <img src="{% static 'images/original_wc.png' %}" alt="Pipe Installation and Repair" class="same-size-img">
+            Pipe Installation and Repair
+        </a>
+
+        <a href="#contact2">
+            <img src="{% static 'images/plumbing-service-with-plumber-workers-repair-maintenance-fix-home-and-cleaning-bathroom-equipment-in-flat-background-illustration-vector.jpg' %}" alt="Leak Detection and Repair" class="same-size-img">
+            Leak Detection and Repair
+        </a>
+
+        <a href="#contact3">
+            <img src="{% static 'images/man-plumber-cleaning-pipe-or-drain-with-plunger-vector-44481728.jpg' %}" alt="Blockage" class="same-size-img">
+            Blockage
+        </a>
+
+        <a href="#contact4">
+            <img src="{% static 'images/istockphoto-513249616-612x612.jpg' %}" alt="Emergency Plumbing Services" class="same-size-img">
+            Emergency Plumbing Services
+        </a>
+    </section>
+
+    <section id="contact1">
+        <div class="service">
+            <h2>Pipe Installation and Repair</h2>
+
+            <img src="{% static 'images/4Q2EYRR2XMI6TMIL6BNCFZ2YMU.jpg' %}" alt="Pipe Installation and Repair" class="custom-size-img">
+
+            <p>
+                <b>Expert pipe installation and repair services:</b>
+                Your plumbing needs, our expertise.
+            </p>
+
+            <h4>Starting at ₹99/Service</h4>
+        </div>
+    </section>
+
+    <section id="contact2">
+        <div class="service">
+            <h2>Leak Detection and Repair</h2>
+
+            <img src="{% static 'images/hands-plumber-work-bathroom-plumbing-repair-service-leak-water-repair-plumbing_106035-63.jpg' %}" alt="Leak Detection and Repair" class="custom-size-img">
+
+            <p>
+                <b>Swift, precise pipe leak detection and repair:</b>
+                Protect your home from water damage with our expert service.
+            </p>
+
+            <h4>Starting at ₹149/Service</h4>
+        </div>
+    </section>
+
+    <section id="contact3">
+        <div class="service">
+            <h2>Blockage</h2>
+
+            <img src="{% static 'images/3d-illustration-effect-powerful-chemical-600nw-1752041744.webp' %}" alt="Blockage" class="custom-size-img">
+
+            <p>
+                <b>Blockage Service:</b>
+                Clear blockages swiftly with our expert service. Keep your plumbing flowing smoothly and prevent backups with our professional assistance.
+            </p>
+
+            <h4>Starting at ₹399/Service</h4>
+        </div>
+    </section>
+
+    <section id="contact4">
+        <div class="service">
+            <h2>Emergency Plumbing Services</h2>
+
+            <img src="{% static 'images/need-an-emergency-plumber.jpg' %}" alt="Emergency Plumbing Services" class="custom-size-img">
+
+            <p>
+                <b>Emergency plumbing problems?</b>
+                We're here to help anytime. Trust us to fix your issue quickly and effectively.
+            </p>
+
+            <h4>Starting at ₹499/Service</h4>
+        </div>
+    </section>
+
+</div>
+
+<!-- Booking Button -->
+<div class="book-btn-container">
+
+    {% if request.session.user_email %}
+
+<a href="{% url 'booking' %}?service=plumber">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+{% else %}
+
+<a href="{% url 'login' %}">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+
+{% endif %}
+</div>
+{% endblock %}

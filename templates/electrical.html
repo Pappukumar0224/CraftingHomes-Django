@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Electrical Services - Crafting Homes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/paint.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <img src="{% static 'images/logo1.jpg' %}"
+         alt="crafting home logo"
+         class="logo">
+
+    <h1>Crafting Homes</h1>
+
+    <p>
+        Your one-stop solution for home services,
+        Precision in Every Detail, Perfection in Every Service.
+    </p>
+</header>
+
+<div class="container">
+
+    <h2>Our Services:</h2>
+
+    <section id="logos">
+
+        <a href="#contact1">
+            <img src="{% static 'images/150264918-professional-air-conditioners-service-maintenance-installation-and-repair-cartoon-master-electrician.jpg' %}"
+                 alt="Electrical Installation and Repairs"
+                 class="same-size-img">
+
+            Electrical Installation <br> and Repairs
+        </a>
+
+        <a href="#contact2">
+            <img src="{% static 'images/maxresdefault.jpg' %}"
+                 alt="Electrical Wiring and Rewiring"
+                 class="same-size-img">
+
+            Electrical Wiring <br> and Rewiring
+        </a>
+
+        <a href="#contact3">
+            <img src="{% static 'images/electric-man-icon-and-logo-free-vector.jpg' %}"
+                 alt="Emergency Electrical Services"
+                 class="same-size-img">
+
+            Emergency Electrical <br> Services
+        </a>
+
+        <a href="#contact4">
+            <img src="{% static 'images/male-electrician-engineer-with-cable-thinking-vector-32003108.jpg' %}"
+                 alt="Looking for something else?"
+                 class="same-size-img">
+
+            Looking for something else?
+        </a>
+
+    </section>
+
+    <!-- Service 1 -->
+    <section id="contact1">
+
+        <div class="service">
+
+            <h2>Electrical Installation and Repairs</h2>
+
+            <img src="{% static 'images/istockphoto-928084674-612x612.jpg' %}"
+                 alt="Electrical Installation and Repairs"
+                 class="custom-size-img">
+
+            <p>
+                <b>Professional electrical services:</b>
+
+                From installations to repairs, we ensure your electrical
+                systems are safe and efficient.
+            </p>
+
+            <h4>Starting at ₹199/Service</h4>
+
+        </div>
+
+    </section>
+
+    <!-- Service 2 -->
+    <section id="contact2">
+
+        <div class="service">
+
+            <h2>Electrical Wiring and Rewiring</h2>
+
+            <img src="{% static 'images/Maximize-Profits-with-Efficient-Electrical-Systems.jpeg.jpg' %}"
+                 alt="Electrical Wiring and Rewiring"
+                 class="custom-size-img">
+
+            <p>
+                <b>Professional electrical wiring and rewiring:</b>
+
+                Safe and efficient solutions tailored to your needs.
+            </p>
+
+            <h4>Starting at ₹119/Service</h4>
+
+        </div>
+
+    </section>
+
+    <!-- Service 3 -->
+    <section id="contact3">
+
+        <div class="service">
+
+            <h2>Emergency Electrical Services</h2>
+
+            <img src="{% static 'images/Sun-City-24-Hour-Emergency-Electricians.jpg' %}"
+                 alt="Emergency Electrical Services"
+                 class="custom-size-img">
+
+            <p>
+                <b>24/7 emergency electrical services:</b>
+
+                Quick response and reliable solutions when you need them most.
+            </p>
+
+            <h4>Starting at ₹499/Service</h4>
+
+        </div>
+
+    </section>
+
+    <!-- Service 4 -->
+    <section id="contact4">
+
+        <div class="service">
+
+            <h2>Looking for something else?</h2>
+
+            <img src="{% static 'images/male-electrician-looking-circuit-board-thinking_23-2148087627.avif' %}"
+                 alt="Looking for something else?"
+                 class="custom-size-img">
+
+            <p>
+                <b>Need a different electrical service?</b>
+
+                Let us know your requirements, and we'll provide the right solution.
+            </p>
+
+            <h4>Starting at ₹99/Service</h4>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- Booking Button -->
+<div class="book-btn-container">
+
+{% if request.session.user_email %}
+
+<a href="{% url 'booking' %}">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+{% else %}
+
+<a href="{% url 'login' %}">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+{% endif %}
+</div>
+{% endblock %}

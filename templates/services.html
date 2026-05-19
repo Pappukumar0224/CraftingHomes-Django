@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Crafting Homes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- SERVICES -->
+
+    <section class="service-details">
+        <h2>Painting Service</h2>
+        <p>Transform your living spaces with our professional painting services.</p>
+        <a href="/paint/" class="btn">Explore Now</a>
+    </section>
+
+    <section class="service-details">
+        <h2>House Cleaning Service</h2>
+        <p>Experience a spotless home with our professional house cleaning services.</p>
+        <a href="/house_cleaning/" class="btn">Explore Now</a>
+    </section>
+
+    <section class="service-details">
+        <h2>Electrician Service</h2>
+        <p>Ensure the safety of your electrical systems with expert services.</p>
+        <a href="/electrical/" class="btn">Explore Now</a>
+    </section>
+
+    <section class="service-details">
+        <h2>Flooring Service</h2>
+        <p>Enhance your home with professional flooring services.</p>
+        <a href="/flooring/" class="btn">Explore Now</a>
+    </section>
+
+    <section class="service-details">
+        <h2>Carpenter Service</h2>
+        <p>Expert carpentry services for furniture and custom woodwork.</p>
+        <a href="/carpenter/" class="btn">Explore Now</a>
+    </section>
+
+    <section class="service-details">
+        <h2>Plumbing Service</h2>
+        <p>Professional plumbing solutions for your home.</p>
+        <a href="/plumber/" class="btn">Explore Now</a>
+    </section>
+
+    <!-- FOOTER -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %} 
+

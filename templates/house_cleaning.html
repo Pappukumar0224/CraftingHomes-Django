@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}House Cleaning Services - Crafting Homes{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/paint.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <img src="{% static 'images/logo1.jpg' %}"
+         alt="crafting home logo"
+         class="logo">
+
+    <h1>Crafting Homes</h1>
+
+    <p>
+        Your one-stop solution for home services,
+        Precision in Every Detail, Perfection in Every Service.
+    </p>
+</header>
+
+<div class="container">
+
+    <h2>Our Services:</h2>
+
+    <section id="logos">
+
+        <a href="#contact1">
+            <img src="{% static 'images/kitchen1.avif' %}"
+                 alt="Kitchen cleaning"
+                 class="same-size-img">
+
+            Kitchen Cleaning
+        </a>
+
+        <a href="#contact2">
+            <img src="{% static 'images/bathroom.png' %}"
+                 alt="Bathroom cleaning"
+                 class="same-size-img">
+
+            Bathroom Cleaning
+        </a>
+
+        <a href="#contact3">
+            <img src="{% static 'images/sofa1.jpg' %}"
+                 alt="Sofa & Carpet Cleaning"
+                 class="same-size-img">
+
+            Sofa & Carpet Cleaning
+        </a>
+
+        <a href="#contact4">
+            <img src="{% static 'images/homee.avif' %}"
+                 alt="Full Home Cleaning"
+                 class="same-size-img">
+
+            Full Home Cleaning
+        </a>
+
+    </section>
+
+    <!-- Service 1 -->
+    <section id="contact1">
+
+        <div class="service">
+
+            <h2>Kitchen Cleaning</h2>
+
+            <img src="{% static 'images/kitchen cleaning.jpg' %}"
+                 alt="Kitchen cleaning"
+                 class="custom-size-img">
+
+            <p>
+                <b>Professional kitchen cleaning service:</b>
+
+                We sanitize countertops, appliances, sinks, and floors
+                for a sparkling hygienic cooking space.
+                Let us handle the grime while you enjoy the shine.
+            </p>
+
+            <h4>Starting at ₹1299/Service</h4>
+
+        </div>
+
+    </section>
+
+    <!-- Service 2 -->
+    <section id="contact2">
+
+        <div class="service">
+
+            <h2>Bathroom Cleaning</h2>
+
+            <img src="{% static 'images/Bathroom cleaning.webp' %}"
+                 alt="Bathroom cleaning"
+                 class="custom-size-img">
+
+            <p>
+                <b>Bathroom cleaning specialists:</b>
+
+                We scrub, sanitize, and deodorize showers, toilets,
+                sinks, and floors for a fresh and sparkling bathroom.
+            </p>
+
+            <h4>Starting at ₹499/Service</h4>
+
+        </div>
+
+    </section>
+
+    <!-- Service 3 -->
+    <section id="contact3">
+
+        <div class="service">
+
+            <h2>Sofa & Carpet Cleaning</h2>
+
+            <img src="{% static 'images/sofa cleaning.jpg' %}"
+                 alt="Sofa & Carpet Cleaning"
+                 class="custom-size-img">
+
+            <p>
+                <b>Revitalize your home:</b>
+
+                Deep cleaning for sofas and carpets,
+                removing stains, odors, and allergens
+                for a refreshed living space.
+            </p>
+
+            <h4>Starting at ₹399/Service</h4>
+
+        </div>
+
+    </section>
+
+    <!-- Service 4 -->
+    <section id="contact4">
+
+        <div class="service">
+
+            <h2>Full Home Cleaning</h2>
+
+            <img src="{% static 'images/Home cleaning.webp' %}"
+                 alt="Full Home Cleaning"
+                 class="custom-size-img">
+
+            <p>
+                <b>Complete home cleaning:</b>
+
+                From top to bottom, we leave no corner untouched,
+                ensuring your entire home shines with freshness and comfort.
+            </p>
+
+            <h4>Starting at ₹3999/Service</h4>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- Booking Button -->
+
+{% if request.session.user_email %}
+
+<a href="{% url 'booking' %}?service=house_cleaning">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+{% else %}
+
+<a href="{% url 'login' %}">
+    <button id="bookNowButton">
+        Book Now
+    </button>
+</a>
+
+
+{% endif %}
+
+{% endblock %}

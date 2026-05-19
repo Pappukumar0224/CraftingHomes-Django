@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Crafting Homes{% endblock %}</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/try.css' %}">
+
+    <!-- Extra Page CSS -->
+    {% block extra_css %}
+    {% endblock %}
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" href="{% static 'images/logo1.jpg' %}">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact</a></li>
+
+        <li class="nav-right">
+
+    {% if request.session.user_email %}
+
+        <a href="/profile/">
+            <i class="fa fa-user"></i> Profile
+        </a>
+
+    {% else %}
+
+        <a href="/login/">
+            <i class="fa fa-fw fa-user"></i> Login
+        </a>
+
+    {% endif %}
+
+</li>
+    </ul>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<footer>
+    <p>&copy; 2024 Crafting Homes. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'js/home.js' %}"></script>
+
+</body>
+</html>
